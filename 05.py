@@ -12,13 +12,18 @@ def calculations():
     for num in numbers:
         total_sum = total_sum + num
     mean_val = total_sum / len(numbers)
-
     #median
-    numbers.sort()
-    n = len(numbers)
-    mid1 = numbers[n // 2 - 1]
-    mid2 = numbers[n // 2]
-    median_val = (mid1 + mid2) / 2
+    sorted_nums = sorted(numbers)
+    n = len(sorted_nums)
+
+    if n % 2 == 1:
+        #odd
+        median_val = sorted_nums[n // 2]
+    else:
+        #even
+        mid1 = sorted_nums[n // 2 - 1]
+        mid2 = sorted_nums[n // 2]
+        median_val = (mid1 + mid2) / 2
 
     #mode
     frequency = {}
