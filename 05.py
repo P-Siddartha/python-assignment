@@ -7,6 +7,7 @@ def calculations():
         rand_num = random.randint(100, 150)
         numbers.append(rand_num)
 
+    numbers.sort()
     #mean
     total_sum = 0
     for num in numbers:
@@ -45,7 +46,7 @@ def calculations():
 
 num_list, mean, median, mode = calculations()
 
-print("First 10 generated numbers:", num_list[:10])
+print("First 10 generated numbers:", num_list[:11])
 print("Mean:", mean)
 print("Median:", median)
 print("Mode:", mode)
